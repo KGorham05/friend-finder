@@ -39,10 +39,6 @@ module.exports = (app) => {
                 diff += (Math.abs(friendsData[i].scores[j] - userScores[j]));
             };
             if (diff < currentDifference) {
-                // console.log('Closest match found = ' + diff);
-				// console.log('Friend name = ' + friends[i].name);
-				// console.log('Friend image = ' + friends[i].photo);
-
 				currentDifference = diff;
 				matchName = friendsData[i].name;
 				matchImage = friendsData[i].photo;
