@@ -2,9 +2,9 @@
 
 const friendsArray = [
   {
-    "name": "Ahmed",
-    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-    "scores": [
+    name: "Ahmed",
+    photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    scores: [
       5,
       1,
       4,
@@ -15,6 +15,38 @@ const friendsArray = [
       5,
       4,
       1
+    ]
+  },
+  {
+    name: "Brittny Spears",
+    photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    scores: [
+      3,
+      2,
+      3,
+      3,
+      3,
+      2,
+      5,
+      2,
+      3,
+      3
+    ]
+  },
+  {
+    name: "Tiffany",
+    photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    scores: [
+      1,
+      5,
+      4,
+      1,
+      4,
+      5,
+      4,
+      1,
+      2,
+      5
     ]
   }
 ];

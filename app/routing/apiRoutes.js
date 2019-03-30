@@ -26,36 +26,34 @@ module.exports = (app) => {
 
 
     app.post("/api/friends", (req, res) => {
-        // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-        // It will do this by sending out the value "true" have a table
-        // req.body is available since we're using the body parsing middleware
-        // console.log(req.body)
-        console.log(req.body.scores)
+        let userInfo = req.body;
+        let userScores = userInfo.scores
+        let matchName = '';
+        let matchImage = '';
+        let currentDifference = 10000;
+        // This will loop through all of our firends
+        for (var i = 0; i <friendsData.length; i++) {
+            let diff = 0;
+            // Loop through all of the user's choices and compare vs friend data
+            for (var j = 0; j < userScores.length; j++) {
+                diff += (Math.abs(friendsData[i].scores[j] - userScores[j]));
+            };
+            if (diff < currentDifference) {
+                // console.log('Closest match found = ' + diff);
+				// console.log('Friend name = ' + friends[i].name);
+				// console.log('Friend image = ' + friends[i].photo);
+
+				currentDifference = diff;
+				matchName = friendsData[i].name;
+				matchImage = friendsData[i].photo;
+            }
+
+        }
+
+        friendsData.push(userInfo);
+        res.json({status: 'OK', matchName: matchName, matchImage: matchImage});
     });
 
-    // ---------------------------------------------------------------------------
-    // I added this below code so you could clear out the table while working with the functionality.
-    // Don"t worry about it!
-
-    app.post("/api/clear", (req, res) => {
-        // Empty out the arrays of data
-        tableData.length = 0;
-        waitListData.length = 0;
-
-        res.json({ ok: true });
-    });
 };
 
-// Determine the user's most compatible friend using the following as a guide:
 
-// Convert each user's results into a simple array of numbers (ex: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]).
-// With that done, compare the difference between current user's scores against those from other users, question by question. Add up the differences to calculate the totalDifference.
-// Example:
-// User 1: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]
-// User 2: [3, 2, 6, 4, 5, 1, 2, 5, 4, 1]
-// Total Difference: 2 + 1 + 2 = 5
-// Remember to use the absolute value of the differences. Put another way: no negative solutions! Your app should calculate both 5-3 and 3-5 as 2, and so on.
-// The closest match will be the user with the least amount of difference.
-// Once you've found the current user's most compatible friend, display the result as a modal pop-up.
-
-// The modal should display both the name and picture of the closest match.
