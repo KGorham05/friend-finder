@@ -30,7 +30,7 @@ Then, submit!
 ## More Info
 
 The **github** for this project can be found here: [Github](https://github.com/KGorham05/friend-finder)
-This project was deployed using **herkou**, here: [Heroku]()
+This project was deployed using **herkou** here: [Heroku](https://friend-finder-kg.herokuapp.com/)
 ___
 This project was created and is maintained by **Kevin Gorham**.  
 
