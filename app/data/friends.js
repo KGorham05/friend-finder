@@ -18,7 +18,7 @@ const friendsArray = [
     ]
   },
   {
-    name: "Brittny Spears",
+    name: "Harry",
     photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
     scores: [
       3,
@@ -34,7 +34,7 @@ const friendsArray = [
     ]
   },
   {
-    name: "Tiffany",
+    name: "Ron",
     photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
     scores: [
       1,
