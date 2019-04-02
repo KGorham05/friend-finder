@@ -27,11 +27,10 @@ Next, answer all of the questions based on how strongly you agree or disagree.
 
 Then, submit!
 
-
-
 ## More Info
 
-The **github** for this project can be found here: [Github](https://github.com/KGorham05/liri-node-app)
+The **github** for this project can be found here: [Github](https://github.com/KGorham05/friend-finder)
+This project was deployed using **herkou**, here: [Heroku]()
 ___
 This project was created and is maintained by **Kevin Gorham**.  
 
